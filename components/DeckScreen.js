@@ -25,10 +25,13 @@ function DeckScreen({ route: { params: { deck: { id } }}, navigation, decks, del
     })
     const styles = StyleSheet.create({
         container: {
-            flexDirection: 'column-reverse',
+            flexDirection: 'column',
             justifyContent: 'flex-end',
         },
         takeQuiz: {
+            position: 'absolute',
+            bottom: 20,
+            width: '100%',
             height: 40,
             justifyContent: 'center',
             alignItems: "center",
@@ -37,13 +40,12 @@ function DeckScreen({ route: { params: { deck: { id } }}, navigation, decks, del
             fontSize: 30,
         },
     })
+    const cards = Object.values(deck.cards || {})
     return (
         <SafeAreaView style={[styles.container]}>
-            <TouchableOpacity style={[styles.takeQuiz]}>
-                <Text style={[styles.takeQuizText]}>Take a Quiz</Text>
-            </TouchableOpacity>
             <FlatList
-                data={Object.values(deck.cards || {})}
+                contentContainerStyle={{ height: '100%' }}
+                data={cards}
                 renderItem={({ item }) => {
                     const renderActions = () => {
                         return (
@@ -60,6 +62,11 @@ function DeckScreen({ route: { params: { deck: { id } }}, navigation, decks, del
                 }}
                 keyExtractor={card => card.id}
             />
+            {cards.length > 0 && (
+                <TouchableOpacity style={[styles.takeQuiz]}>
+                    <Text style={[styles.takeQuizText]}>Take a Quiz</Text>
+                </TouchableOpacity>
+            )}
         </SafeAreaView>
     )
 }
