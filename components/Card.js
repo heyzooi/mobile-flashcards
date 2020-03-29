@@ -1,21 +1,19 @@
 import React, { useState, useRef } from 'react'
 import { connect } from "react-redux";
-import { View, Button, TextInput, Animated, StyleSheet } from 'react-native';
+import { View, TextInput, Animated, StyleSheet, Button } from 'react-native'
 
-function Card({ card, editable, onChange, onSave }) {
+function Card({ card, editable, onChange, onSave, onFlip, animatedValueState }) {
     editable = editable || false
-    const [frontText, setFrontText] = useState(card.frontText || '')
-    const [backText, setBackText] = useState(card.backText || '')
+    const [frontText, setFrontText] = editable ? useState(card.frontText || '') : [card.frontText]
+    const [backText, setBackText] = editable ? useState(card.backText || '') : [card.backText]
     if (onChange) {
         onChange({
             frontText,
             backText
         })
     }
-    const frontTextInputRef = useRef(null)
-    const backTextInputRef = useRef(null)
     const [value, setValue] = useState(0)
-    const [animatedValue] = useState(new Animated.Value(0))
+    const [animatedValue] = animatedValueState || useState(new Animated.Value(0))
     animatedValue.addListener(({ value }) => setValue(value))
     const [frontInterpolate] = useState(animatedValue.interpolate({
         inputRange: [0, 180],
@@ -37,28 +35,38 @@ function Card({ card, editable, onChange, onSave }) {
     }
     const styles = StyleSheet.create({
         flipCard: {
-            backfaceVisibility: 'hidden'
+            backfaceVisibility: 'hidden',
         },
         backCard: {
             position: 'absolute',
-            top: 0
+            top: 0,
         }
     })
+    const frontTextInputRef = useRef()
+    const backTextInputRef = useRef()
     const flipCard = () => {
-        if (value >= 90) {
+        const showFront = value >= 90
+        if (showFront) {
             Animated.spring(animatedValue, {
                 toValue: 0,
                 friction: 8,
                 tension: 10
             }).start()
-            frontTextInputRef.current.focus()
+            if (editable) {
+                frontTextInputRef.current.focus()
+            }
         } else {
             Animated.spring(animatedValue, {
                 toValue: 180,
                 friction: 8,
                 tension: 10
             }).start()
-            backTextInputRef.current.focus()
+            if (editable) {
+                backTextInputRef.current.focus()
+            }
+        }
+        if (onFlip) {
+            onFlip(showFront)
         }
     }
     const save = () => {

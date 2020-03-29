@@ -9,6 +9,7 @@ import rootReducer from './reducers'
 import thunk from 'redux-thunk'
 import DeckScreen from './components/DeckScreen';
 import EditCardScreen from './components/EditCardScreen';
+import QuizScreen from './components/QuizScreen';
 
 const logger = (store) => (next) => (action) => {
   console.group(action.type)
@@ -31,6 +32,7 @@ export default function App() {
           <Stack.Screen name="Edit Deck" component={EditDeckScreen} />
           <Stack.Screen name="Deck" component={DeckScreen} />
           <Stack.Screen name="Edit Card" component={EditCardScreen} />
+          <Stack.Screen name="Quiz" component={QuizScreen} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

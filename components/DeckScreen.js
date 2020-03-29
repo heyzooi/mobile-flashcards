@@ -63,7 +63,7 @@ function DeckScreen({ route: { params: { deck: { id } }}, navigation, decks, del
                 keyExtractor={card => card.id}
             />
             {cards.length > 0 && (
-                <TouchableOpacity style={[styles.takeQuiz]}>
+                <TouchableOpacity style={[styles.takeQuiz]} onPress={() => navigation.push("Quiz", { deck })}>
                     <Text style={[styles.takeQuizText]}>Take a Quiz</Text>
                 </TouchableOpacity>
             )}
