@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "FlashCards",
     "slug": "mobile-flashcards",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hzapps.mobile-flashcards",
+      "buildNumber": "1.0.0"
+    },
+    "description": "Project developed for study purposes of the Udacity React Nanodegree",
+    "githubUrl": "https://github.com/heyzooi/mobile-flashcards"
   }
 }
