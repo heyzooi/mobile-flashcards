@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "f5a0f482abd8a5f559b7",
-    "url": "/mobile-flashcards/static/js/app.708a5a55.chunk.js"
+    "revision": "5690d167f7b4d7a8bc3a",
+    "url": "/mobile-flashcards/static/js/app.ed5adfe4.chunk.js"
   },
   {
     "revision": "d87daa3f4b6fad4df5d5",
@@ -12,12 +12,12 @@ self.__precacheManifest = [
     "url": "/mobile-flashcards/static/js/2.9019fb92.chunk.js"
   },
   {
-    "revision": "d0c694b562b2208635f250762cd7fc79",
-    "url": "/mobile-flashcards/serve.json"
-  },
-  {
     "revision": "48c7ed4e7da9792af288a60d7242d615",
     "url": "/mobile-flashcards/expo-service-worker.js"
+  },
+  {
+    "revision": "d0c694b562b2208635f250762cd7fc79",
+    "url": "/mobile-flashcards/serve.json"
   },
   {
     "revision": "e10ce0552ee7802193950fa9181bd961",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/mobile-flashcards/favicon.ico"
   },
   {
-    "revision": "33491e82cc3cf5924d27ebd73b836986",
+    "revision": "0b2f0d7f01b196b55cabcf049fd75980",
     "url": "/mobile-flashcards/index.html"
   },
   {
