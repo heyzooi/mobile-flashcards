@@ -42,9 +42,9 @@ function DeckScreen({ route: { params: { deck: { id } }}, navigation, decks, del
     })
     const cards = Object.values(deck.cards || {})
     return (
-        <SafeAreaView style={[styles.container]}>
+        <SafeAreaView style={[styles.container, { height: '100%' }]}>
             <FlatList
-                contentContainerStyle={{ height: '100%' }}
+                contentContainerStyle={[{ height: '100%' }]}
                 data={cards}
                 renderItem={({ item }) => {
                     const renderActions = () => {
