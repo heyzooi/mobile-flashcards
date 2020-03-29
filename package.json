@@ -6,6 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+    "predeploy": "expo build:web",
     "deploy": "gh-pages -d web-build"
   },
   "dependencies": {
@@ -32,5 +33,6 @@
     "babel-preset-expo": "~8.0.0",
     "gh-pages": "^2.2.0"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://heyzooi.github.io/mobile-flashcards"
 }
