@@ -24,6 +24,9 @@ function NewDeckScreen({ route: { params: { deck } }, navigation, saveDeck }) {
     const isNewDeck = deck.id == null
     const [name, setName] = useState(deck.name || '')
     const save = () => {
+        if (name.trim().length === 0) {
+            return
+        }
         saveDeck({ name })
         navigation.goBack()
     }

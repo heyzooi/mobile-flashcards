@@ -20,7 +20,7 @@ function EditCardScreen({
             return
         }
         saveCard(deck.id, card)
-        navigation.goBack()
+        navigation.goBack() //goes back to the "Deck" screen
     }
     navigation.setOptions({
         title: isNewCard ? 'New Card' : 'Edit Card',

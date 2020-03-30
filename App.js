@@ -10,15 +10,7 @@ import thunk from 'redux-thunk'
 import DeckScreen from './components/DeckScreen';
 import EditCardScreen from './components/EditCardScreen';
 import QuizScreen from './components/QuizScreen';
-
-const logger = (store) => (next) => (action) => {
-  console.group(action.type)
-      console.log('Action:', action)
-      const result = next(action)
-      console.log('New State:', store.getState())
-  console.groupEnd()
-  return result
-}
+import logger from 'redux-logger'
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger))
 
