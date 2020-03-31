@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { connect } from "react-redux"
 import { View, StyleSheet, Button, Text, Animated } from 'react-native'
 import Card from './Card'
+import { cancelNotification } from '../notifications'
 
 function QuizScreen({ route: { params: { deck } }, navigation }) {
     const [result, setResult] = useState(Object.keys(deck.cards).reduce((state, cardId) => ({
@@ -16,6 +17,7 @@ function QuizScreen({ route: { params: { deck } }, navigation }) {
         const correct = answers.filter((answer) => answer).length
         const incorrect = (answers.length - correct) || 0
         const submit = () => {
+            cancelNotification()
             navigation.pop()
         }
         return (

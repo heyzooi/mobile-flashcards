@@ -26,9 +26,23 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.hzapps.mobile-flashcards",
-      "buildNumber": "1.0.0"
+      "buildNumber": "1.0.0",
+      "publishBundlePath": "ios/flashcards/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/flashcards/Supporting/shell-app-manifest.json"
     },
     "description": "Project developed for study purposes of the Udacity React Nanodegree",
-    "githubUrl": "https://github.com/heyzooi/mobile-flashcards"
+    "githubUrl": "https://github.com/heyzooi/mobile-flashcards",
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.14.6-sdk36.0.0-8ea388d1-463b-4e91-bbf7-2d95d0174c96.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.14.2-sdk36.0.0-ce7e16db-fd5d-4fdd-bdeb-701ba94a04d1.tar.gz"
+    },
+    "scheme": "expcd56d1b4c9f746f5abe63928bc43c20c",
+    "android": {
+      "package": "com.hzapps.mobile_flashcards",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    }
   }
 }

@@ -11,10 +11,12 @@ import DeckScreen from './components/DeckScreen';
 import EditCardScreen from './components/EditCardScreen';
 import QuizScreen from './components/QuizScreen';
 import logger from 'redux-logger'
+import { scheduleNotifications } from './notifications'
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger))
 
 export default function App() {
+  scheduleNotifications()
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>

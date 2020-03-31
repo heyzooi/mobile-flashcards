@@ -1,6 +1,5 @@
 import { SET_DECKS, SAVE_DECK, SAVE_CARD, DELETE_CARD, DELETE_DECK } from '../actions/deck'
 import { saveDecks } from '../storage'
-import uuid from 'react-native-uuid'
 
 export default function decks(state = null, action) {
     switch (action.type) {
@@ -9,7 +8,7 @@ export default function decks(state = null, action) {
         case SAVE_DECK: {
             const { deck } = action
             if (!deck.id) {
-                deck.id = uuid.v4()
+                deck.id = `deck-${(Object.keys(state || {}).length + 1).toString()}`
             }
             const decks = {
                 ...state,
@@ -22,7 +21,7 @@ export default function decks(state = null, action) {
             const { deckId, card } = action
             const deck = state[deckId]
             if (!card.id) {
-                card.id = uuid.v4()
+                card.id = `card-${(Object.keys(deck.cards || {}).length + 1).toString()}`
             }
             const decks = {
                 ...state,
