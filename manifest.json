@@ -12,6 +12,11 @@
     {
       "platform": "itunes",
       "id": "com.hzapps.mobile-flashcards"
+    },
+    {
+      "platform": "play",
+      "url": "http://play.google.com/store/apps/details?id=com.hzapps.mobile_flashcards",
+      "id": "com.hzapps.mobile_flashcards"
     }
   ],
   "prefer_related_applications": true,

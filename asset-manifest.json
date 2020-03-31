@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/mobile-flashcards/static/js/app.ed5adfe4.chunk.js",
-    "app.js.map": "/mobile-flashcards/static/js/app.ed5adfe4.chunk.js.map",
+    "app.js": "/mobile-flashcards/static/js/app.065fa61e.chunk.js",
+    "app.js.map": "/mobile-flashcards/static/js/app.065fa61e.chunk.js.map",
     "runtime~app.js": "/mobile-flashcards/static/js/runtime~app.08bc9c05.js",
     "runtime~app.js.map": "/mobile-flashcards/static/js/runtime~app.08bc9c05.js.map",
-    "static/js/2.9019fb92.chunk.js": "/mobile-flashcards/static/js/2.9019fb92.chunk.js",
-    "static/js/2.9019fb92.chunk.js.map": "/mobile-flashcards/static/js/2.9019fb92.chunk.js.map",
+    "static/js/2.f035f90a.chunk.js": "/mobile-flashcards/static/js/2.f035f90a.chunk.js",
+    "static/js/2.f035f90a.chunk.js.map": "/mobile-flashcards/static/js/2.f035f90a.chunk.js.map",
     "favicon-16.png": "/mobile-flashcards/favicon-16.png",
     "favicon-32.png": "/mobile-flashcards/favicon-32.png",
     "favicon.ico": "/mobile-flashcards/favicon.ico",
@@ -15,7 +15,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.08bc9c05.js",
-    "static/js/2.9019fb92.chunk.js",
-    "static/js/app.ed5adfe4.chunk.js"
+    "static/js/2.f035f90a.chunk.js",
+    "static/js/app.065fa61e.chunk.js"
   ]
 }

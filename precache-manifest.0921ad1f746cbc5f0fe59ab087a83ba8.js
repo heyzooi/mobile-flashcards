@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "5690d167f7b4d7a8bc3a",
-    "url": "/mobile-flashcards/static/js/app.ed5adfe4.chunk.js"
+    "revision": "d8d9c4d74e27e214280c",
+    "url": "/mobile-flashcards/static/js/app.065fa61e.chunk.js"
   },
   {
     "revision": "d87daa3f4b6fad4df5d5",
     "url": "/mobile-flashcards/static/js/runtime~app.08bc9c05.js"
   },
   {
-    "revision": "62da637efa49f0b526d9",
-    "url": "/mobile-flashcards/static/js/2.9019fb92.chunk.js"
+    "revision": "000b585c78a27b7d516e",
+    "url": "/mobile-flashcards/static/js/2.f035f90a.chunk.js"
   },
   {
     "revision": "48c7ed4e7da9792af288a60d7242d615",
@@ -32,11 +32,11 @@ self.__precacheManifest = [
     "url": "/mobile-flashcards/favicon.ico"
   },
   {
-    "revision": "0b2f0d7f01b196b55cabcf049fd75980",
+    "revision": "d95bd0f1505f5f3733ec9d8e7438a707",
     "url": "/mobile-flashcards/index.html"
   },
   {
-    "revision": "6257202f51eb24f36678fa129607cea5",
+    "revision": "f1b25b6f1ebf5b1ff1ad010ea16e2c20",
     "url": "/mobile-flashcards/manifest.json"
   },
   {
